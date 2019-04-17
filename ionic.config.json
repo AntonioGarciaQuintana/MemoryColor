@@ -1,0 +1,7 @@
+{
+  "name": "MemoryColor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

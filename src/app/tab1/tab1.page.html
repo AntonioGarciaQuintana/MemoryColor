@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Memory Game
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-note color="secondary"><h1 class="custom-tittle">Score: {{score}}</h1></ion-note>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-lg *ngIf="!gameRunning">
+        <ion-button expand="block" (click)="startGame()">
+          Start Game
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" size-lg>
+        <ion-button color="dark" class="custom-button" (click)="OnClickButton(1)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 1}" style="border-radius: 13px;">
+        </ion-button>
+
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="secondary" class="custom-button added_btn" (click)="OnClickButton(2)"
+          [disabled]="runningSecuence" [ngClass]="{'is-active': buttonSeLecterd === 2}" style="border-radius: 13px;">
+        </ion-button>
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="tertiary" class="custom-button" (click)="OnClickButton(3)"
+          [ngClass]="{'is-active': buttonSeLecterd === 3}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" size-lg>
+        <ion-button color="success" class="custom-button" (click)="OnClickButton(4)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 4}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="warning" class="custom-button" (click)="OnClickButton(5)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 5}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="danger" class="custom-button" (click)="OnClickButton(6)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 6}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" size-lg>
+        <ion-button color="purple" class="custom-button" (click)="OnClickButton(7)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 7,
+                      'is-disabled' : runningSecuence}" style="background-color: purple;border-radius: 13px;">
+        </ion-button>
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="medium" class="custom-button" (click)="OnClickButton(8)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 8}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+      <ion-col size="4" size-lg>
+        <ion-button color="primary" class="custom-button" (click)="OnClickButton(9)" [disabled]="runningSecuence"
+          [ngClass]="{'is-active': buttonSeLecterd === 9}" style="border-radius: 13px;"></ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
